@@ -1,0 +1,721 @@
+
+div{
+	border: 1px solid #777;
+}
+.bg{
+	width: 600px;
+	height: 450px;
+	background: #9f9;
+	margin: 0 auto;
+	margin-top: 50px;
+	padding-top: 50px;
+	z-index: 0;	
+}
+.elephant{
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+	border:1px solid #9f9;	
+	position: relative;
+}
+
+
+/*尾巴*/
+.tail{
+	width: 100px;
+	height: 100px;
+	border: 0;
+	border-top:13px solid #aaa;
+	border-radius: 50% 0px 0px 0px;
+	transform: rotate(-10deg);
+	position: absolute;
+	top: 125px;
+	left: -9px;
+	animation: body linear 2s infinite;
+}
+
+
+/*身体*/
+.body{
+	width: 290px;
+	height: 220px;
+	background: #aaa;
+	border-radius: 200px 150px 200px 130px;
+	position: absolute;
+	top: 90px;
+	left: 0px;
+	animation: body linear 2s infinite;
+}
+
+
+.dang-r{
+	width: 5px;
+	height: 15px;
+	background: #aaa;
+	margin-left: 58px;
+	border: 0;
+}
+.dang-l{
+	width: 5px;
+	height: 30px;
+	background: #aaa;
+	margin-left: 58px;
+	border: 0;
+}
+.dl{
+	width: 5px;
+	height: 5px;
+	background: #aaa;
+	border: 0;
+	border-radius: 50%;
+	position: absolute;
+	top:260px;
+	left: 30px;
+	transform-origin: center top;
+	animation: dt linear 2s infinite;
+}
+.dr{
+	width: 5px;
+	height: 5px;
+	background: #aaa;
+	border: 0;
+	position: absolute;
+	top:260px;
+	left: 165px;
+	transform-origin: center top;
+	animation: df linear 2s infinite;
+}
+.sla{
+	width: 60px;
+	height: 10px;
+	border: 0;
+	background: #333;
+	border-radius: 50%;
+	position: absolute;
+	top:332px;
+	left: 55px;
+	animation: swf linear 2s infinite;
+}
+.sra{
+	width: 60px;
+	height: 10px;
+	border: 0;
+	background: #333;
+	border-radius: 50%;
+	position: absolute;
+	top:332px;
+	left: 185px;
+	animation: swt linear 2s infinite;
+}
+.slb{
+	width: 60px;
+	height: 10px;
+	border: 0;
+	background: #333;
+	border-radius: 50%;
+	position: absolute;
+	top:345px;
+	left: 37px;
+	animation: swt linear 2s infinite;
+}
+.srb{
+	width: 60px;
+	height: 10px;
+	border: 0;
+	background: #333;
+	border-radius: 50%;
+	position: absolute;
+	top:345px;
+	left: 170px;
+	animation: swf linear 2s infinite;
+}
+
+
+/*左前腿*/
+.foot-left-before{
+	width: 60px;
+	height: 70px;
+	background: #aaa;
+	border-top:0;
+	border-bottom: 0;
+	position: absolute;
+	top: 273px;
+	left: 35px;
+	animation: ft linear 2s infinite;
+}
+.foot-left-before .down{
+	width: 64px;
+	height: 20px;
+	background: #aaa;
+	margin-top: 60px;
+	border-top: 0px;
+	border-radius: 12px 14px 11px 11px;
+	position: absolute;
+	right: -4px;
+}
+.foot-left-before .down .left{
+	display: inline-block;
+	width: 12px;
+	height: 13px;
+	border: 0;
+	background: #fff;
+	margin-top: 3px;
+	margin-left:42px;
+	border-radius: 5px 8px 3px 2px;
+}
+.foot-left-before .down .right{
+	display: inline-block;
+	width: 3px;
+	height: 12px;
+	border: 0;
+	background: #fff;
+	margin-top: 3px;
+	border-radius: 1px 13px 13px 1px;
+}
+
+
+/*右前腿*/
+.foot-right-before{
+	width: 60px;
+	height: 70px;
+	background: #aaa;
+	border-top:0;
+	border-bottom: 0;
+	position: absolute;
+	top: 273px;
+	right: 170px;
+	transform-origin: center -10px;
+	animation: ff linear 2s infinite;
+}
+.foot-right-before .down{
+	width: 64px;
+	height: 20px;
+	background: #aaa;
+	margin-top: 60px;
+	border-top: 0px;
+	border-radius: 12px 14px 11px 11px;
+	position: absolute;
+	right: -4px;
+}
+.foot-right-before .down .left{
+	display: inline-block;
+	width: 12px;
+	height: 13px;
+	border: 0;
+	background: #fff;
+	margin-top: 3px;
+	margin-left:42px;
+	border-radius: 5px 8px 3px 2px;
+}
+.foot-right-before .down .right{
+	display: inline-block;
+	width: 3px;
+	height: 12px;
+	border: 0;
+	background: #fff;
+	margin-top: 3px;
+	border-radius: 1px 13px 13px 1px;
+}
+
+
+
+/*左后腿*/
+.foot-left-after{
+	width: 60px;
+	height: 70px;
+	background: #888;
+	border-top:0;
+	border-bottom: 0;
+	position: absolute;
+	top: 260px;
+	left: 50px;
+	animation: ff linear 2s infinite;
+}
+.foot-left-after .down{
+	width: 64px;
+	height: 20px;
+	background: #888;
+	margin-top: 60px;
+	border-top: 0px;
+	border-radius: 12px 14px 11px 11px;
+	position: absolute;
+	right: -4px;
+}
+.foot-left-after .down .left{
+	display: inline-block;
+	width: 12px;
+	height: 13px;
+	border: 0;
+	background: #eee;
+	margin-top: 3px;
+	margin-left:42px;
+	border-radius: 5px 8px 3px 2px;
+}
+.foot-left-after .down .right{
+	display: inline-block;
+	width: 3px;
+	height: 12px;
+	border: 0;
+	background: #eee;
+	margin-top: 3px;
+	border-radius: 1px 13px 13px 1px;
+}
+
+/*右后腿*/
+.foot-right-after{
+	width: 60px;
+	height: 70px;
+	background: #888;
+	border-top:0;
+	border-bottom: 0;
+	position: absolute;
+	top: 260px;
+	right: 155px;
+	animation: ft linear 2s infinite;
+}
+.foot-right-after .down{
+	width: 64px;
+	height: 20px;
+	background: #888;
+	margin-top: 60px;
+	border-top: 0px;
+	border-radius: 12px 14px 11px 11px;
+	position: absolute;
+	right: -4px;
+}
+.foot-right-after .down .left{
+	display: inline-block;
+	width: 12px;
+	height: 13px;
+	border: 0;
+	background: #eee;
+	margin-top: 3px;
+	margin-left:42px;
+	border-radius: 5px 8px 3px 2px;
+}
+.foot-right-after .down .right{
+	display: inline-block;
+	width: 3px;
+	height: 12px;
+	border: 0;
+	background: #eee;
+	margin-top: 3px;
+	border-radius: 1px 13px 13px 1px;
+}
+
+
+
+/*头部*/
+.head{
+	width: 200px;
+	height: 200px;
+	background: #aaa;
+	border-right: 0;
+	border-radius: 50%;
+	margin: 50px 0 0 200px;
+	position: relative;
+	transform-origin: 45% center;
+	animation: head linear 2s infinite;
+}
+embed{
+	display: none;
+}
+.head:hover embed{
+	display: block;
+}
+.ears{
+	width: 100px;
+	height: 150px;
+	/*background: -webkit-linear-gradient(left,#aaa, #bbb); */
+	background: #aaa;
+	border-right: 0;
+	border-radius: 625px 120px 82px 410px;
+	transform: rotate(-8deg);
+	position: absolute;
+	left: -41px;
+	top: 25px;
+}
+.eye{
+	width: 65px;
+	height: 18px;
+	background: -webkit-linear-gradient(#888, #bbb); 
+	border-radius: 9px;
+	border:0;
+	position: absolute;
+	top: 40px;
+	right: 16px;
+}
+.eye-l{
+	width: 12px;
+	height: 12px;
+	background: #fff;
+	border-radius: 50%;
+	margin-top:2px;
+	margin-left: 8px;
+	float: left;
+}
+.eye-r{
+	width: 12px;
+	height: 12px;
+	background: #fff;
+	border-radius: 50%;
+	margin-top: 2px;
+	margin-right: 8px;
+	float: right;
+}
+.yanpi{
+	width: 58px;
+	height: 2px;
+	background: #999;
+	border-radius: 2px;
+	border:0;
+	position: absolute;
+	top: 40px;
+	right: 19px;
+	transform-origin: center top;
+	animation: yp linear 1s infinite;
+}
+.nose{
+	width: 40px;
+	height: 200px;
+	background: #aaa;
+	border-radius: 1px 75% 21px 0;
+	border-top:0;
+	border-bottom: 0;
+	border-left: 0;
+	position: absolute;
+	top: 56px;
+	right: 12px;
+	transform-origin: center top;
+	animation: nose linear 2s infinite;
+}
+.nose-tip{
+	width: 50px;
+	height: 18px;
+	background: #aaa;
+	border-radius: 9px;
+	border: 0;
+	margin-top: 182px;
+	position: absolute;
+	right:-6px;
+}
+.tooth{
+	width: 50px;
+	height:30px;
+	border: 0;
+	border-bottom: 21px solid #fff;
+	border-bottom-right-radius:90%; 
+	transform: rotate(25deg);
+	position: absolute;
+	top: 158px;
+	right: 27px;
+}
+.tooth-out{
+	width: 30px;
+	height: 30px;
+	background: #aaa;
+	margin-top: 24px;
+	border-radius: 40%;
+	border-top: 0;
+	border-left: 0;
+	position: absolute;
+	right: 37px;
+}
+
+.glass{
+	width: 100px;
+	height: 50px;
+	border:0;
+	position: absolute;
+	top:33px;
+	right: -6px;
+}
+.glass-left{
+	display: none;
+	width: 35px;
+	height: 30px;
+	padding-left: 5px;
+	background: #222;
+	border-radius: 10px 10px 50px 50px;
+	float: left;
+}
+.glass-left div{
+	display: inline-block;
+	width: 3px;
+	height: 20px;
+	margin-top: 3px;
+	background: #666;
+	border:0;
+	transform: rotate(-20deg);
+}
+.glass-right{
+	display: none;
+	width: 35px;
+	height: 30px;
+	padding-left: 5px;
+	background: #222;
+	border-radius: 10px 10px 50px 50px;
+	float: left;
+}
+.glass-right div{
+	display: inline-block;
+	width: 3px;
+	height: 20px;
+	margin-top: 3px;
+	background: #666;
+	border:0;
+	transform: rotate(-20deg);
+}
+.lianzi{
+	display: none;
+	width: 170px;
+	height: 220px;
+	border: 0;
+	border-bottom: 10px dotted #ff5;
+	border-radius: 100%
+}
+.lianzi div{
+	width: 65px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background: #ff5;
+	margin: 0 auto;
+	border:0;
+	border-radius: 50%;
+	position: absolute;
+	top: 228px;
+	right: 88px;
+}
+.hat{
+	display: none;
+	width: 150px;
+	height: 80px;
+	background: #222;
+	border: 1px solid #eee;
+	border-radius: 150px 150px 35px 0px;
+	position: absolute;
+	top: -51px;
+	right: 20px;
+}
+.hat div{
+	width: 70px;
+	height: 70px;
+	border:0;
+	border-top:3px solid #ddd;
+	border-left:3px solid #ddd;
+	border-right:3px solid #ddd;
+	margin-left: 35px;
+	border-radius: 80px 80px 0px 0px;
+}
+.hat:after{
+	display: block;
+	content: "";
+	width: 100px;
+	height: 50px;
+	background: #222;
+	border:0;
+	border-bottom: 2px solid #eee;
+	border-radius: 50%;
+	transform: rotate(-20deg);
+	position: absolute;
+	top:31px;
+	right: -30px;
+}
+
+
+.head:hover .glass-left{
+	display: block;
+}
+.head:hover .glass-right{
+	display: block;
+}
+.head:hover .g-tui{
+	display: block;
+}
+.head:hover .lianzi{
+	display: block;
+}
+.head:hover .lianzi>div{
+	display: block;
+}
+.head:hover .hat{
+	display: block;
+}
+
+
+/*第一步的影子动画*/
+@-webkit-keyframes swf {
+    0% {
+        transform: scale(1,1) translateX(-10px);
+    }
+    25% {
+        transform: scale(0.5,0.5) translateX(0px);
+    }
+    45%,50% {
+        transform: scale(1,1) translateX(10px);
+    }
+    75% {
+        transform: scale(1,1) translateX(0px);
+    }
+    100% {
+        transform: scale(1,1) translateX(-10px);
+    }
+}
+/*第一步的挡腿的动画*/
+@-webkit-keyframes df {
+    0% {
+        transform: scale(1,1) rotate(10deg);
+    }
+    25% {
+        transform: scale(2,8) rotate(0deg);
+    }
+    45%,55% {
+        transform: scale(1,1) rotate(-10deg);
+    }
+    75% {
+        transform: scale(1,1) rotate(0deg);
+    }
+    100% {
+        transform: scale(1,1) rotate(10deg);
+    }
+}
+/*第一步腿的动画*/
+@-webkit-keyframes ff {
+    0% {
+        transform: skew(-10deg,0deg);
+    }
+    25% {
+        transform: skew(0deg,0deg) scale(1,0.9);
+    }
+    45%,55% {
+        transform: skew(10deg,0deg);
+    }
+    75% {
+        transform: skew(0deg,0deg);
+    }
+    100% {
+        transform: skew(-10deg,0deg) ;
+    }
+}
+/*第二步的影子动画*/
+@-webkit-keyframes swt {
+    0%,5% {
+        transform: scale(1,1) translateX(10px);
+    }
+    25% {
+        transform: scale(1,1) translateX(0px);
+    }
+    50% {
+        transform: scale(1,1) translateX(-10px);
+    }
+    75% {
+        transform: scale(0.5,0.5) translateX(0px);
+    }
+    95%,100% {
+        transform: scale(1,1) translateX(10px);
+    }
+}
+/*第二步的挡腿的动画*/
+@-webkit-keyframes dt {
+    0%,5% {
+        transform: scale(1,1);
+    }
+    25% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1,1);
+    }
+    75% {
+        transform: scale(6,6);
+    }
+    95%,100% {
+        transform: scale(1,1);
+    }
+}
+/*第二步腿的动画*/
+@-webkit-keyframes ft {
+    0%,5% {
+        transform: skew(10deg,0deg);
+    }
+    25% {
+         transform: skew(0deg,0deg);
+    }
+    50% {
+        transform: skew(-10deg,0deg);
+    }
+    75% {
+        transform: skew(0deg,0deg) scale(1,0.8);
+    }
+    95%,100% {
+       transform: skew(10deg,0deg);
+    }
+}
+
+/*身体动画*/
+@-webkit-keyframes body {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+         transform: translateY(3px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    75% {
+        transform: translateY(3px);
+    }
+    100% {
+       transform: translateY(0px);
+    }
+}
+/*头部动画*/
+@-webkit-keyframes head {
+    0% {
+        transform: translateY(0px) rotate(3deg);
+    }
+    25% {
+         transform: translateY(3px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(0px) rotate(3deg);
+    }
+    75% {
+        transform: translateY(3px) rotate(0deg);
+    }
+    100% {
+       transform: translateY(0px) rotate(3deg);
+    }
+}
+/*鼻子动画*/
+@-webkit-keyframes nose {
+    0% {
+        transform: scale(0.95,1.1);
+    }
+    25% {
+         transform: scale(1,1);
+    }
+    50% {
+        transform: scale(0.95,1.1);
+    }
+    75% {
+        transform: scale(1,1);
+    }
+    100% {
+       transform: scale(0.95,1.1);
+    }
+}
+/*眼皮动画*/
+@-webkit-keyframes yp {
+    0% {
+        transform: scale(1,6);
+    }
+    10%,90% {
+        transform: scale(1,1);
+    }
+    100% {
+       transform: scale(1,6);
+    }
+}
