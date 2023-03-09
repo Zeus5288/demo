@@ -7,6 +7,50 @@
     <title>canvas压缩图片</title>
 </head>
 <body>
-    <script></script>
+    <canvas id="canvasContent" width="640px" height="450px"></canvas>
+    <script>
+        // 获取canvas对象
+        const cnv = document.getElementById('canvasContent')
+        // 获取上下文对象context
+        const cxt = cnv.getContext('2d')
+
+        const image = new Image()
+        image.src = './a.webp'
+        image.onload = () => {
+            cxt.drawImage(image, 0, 0, 320, 450)
+            // 获取像素数组
+            let imageData = cxt.getImageData(0, 0, 320, 450)
+            let data = imageData.data
+            // 遍历像素
+            // for (let i = 0; i < data.length; i += 4) {
+            //     data[i + 0] = 255 - data[i + 0]
+            //     data[i + 1] = 255 - data[i + 1]
+            //     data[i + 2] = 255 - data[i + 2]
+            // }
+            // for (let i = 0; i < data.length; i += 4) {
+            //     var grayscale = data[i] * 0.3 + data[i + 1] * 0.6 + data[i + 2] * 0.1
+            //     data[i + 0] = grayscale
+            //     data[i + 1] = grayscale
+            //     data[i + 2] = grayscale
+            // }
+            // for (let i = 0; i < data.length; i += 4) {
+            //     const a = 100
+            //     data[i + 0] += a
+            //     data[i + 1] += a
+            //     data[i + 2] += a
+            // }
+            for (let i = 0; i < data.length; i += 1) {
+                const x = i % 320
+                const y = Math.floor(i / 320)
+                if((x > 100 && x < 200) && (y > 100 && y < 200)) {
+                    data[i + 0] = 255 - data[i + 0]
+                    data[i + 1] = 255 - data[i + 1]
+                    data[i + 2] = 255 - data[i + 2]
+                }
+            }
+            // 在指定位置输出图片
+            cxt.putImageData(imageData, 320, 0)
+        }
+    </script>
 </body>
 </html>
